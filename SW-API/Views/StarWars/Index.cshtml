@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Star Wars</h1>
+
+<div class="form-group">
+    <form action="../StarWars/GetPersonById" method="post" class="form-group">
+        Character: <input type="search" name="id" aria-describedby ="searchHelp" value="" placeholder="Please enter a number" class="form-control form-control-lg"/><br/>
+    <medium id="searchHelp" class="form-text text-muted">Use the Force!</medium>
+        <input type="submit" name="submit" value="submit" class="btn btn-light" />
+    
+</form>
+    <form action="../StarWars/GetPlanetById" method="post">
+        Planet: <input type="search" name="id" value="" aria-describedby ="searchHelp" placeholder="Please enter a number" class="form-control form-control-lg" /><br />
+        <medium id="searchHelp" class="form-text text-muted">Your Anger Makes You Stronger!</medium>
+        <input type="submit" name="submit" value="submit" class="btn btn-dark" />
+    </form>
+</div>

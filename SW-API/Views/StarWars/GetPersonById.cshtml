@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "GetPersonById";
+}
+
+@model People
+
+<h1>Character and Stuff</h1>
+
+@Model.Name
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Height</th>
+        <td>@Model.Height</td>
+    </tr>
+    <tr>
+        <th>Weight</th>
+        <td>@Model.Mass</td>
+    </tr>
+    <tr>
+        <th>Homeworld</th>
+        <td>@Model.Homeworld</td>
+
+    </tr>
+    <tr>
+        <th>Favorite Vehicles:</th>
+        <td>
+            @foreach (string vehicle in Model.Vehicles)
+            {
+                <div>@vehicle</div>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>Appears in:</th>
+        <td>
+            @foreach (string appaerance in Model.Films)
+            {
+                <div>@appaerance</div>
+
+            }
+        </td>
+    </tr>
+
+</table>
